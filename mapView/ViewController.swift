@@ -103,6 +103,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
         }
     }
 
+
     @IBAction func showMyLocation(_ sender: Any) {
         followMe = true
     }
@@ -143,7 +144,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
     // Вызывается когда нажали на метку на карте
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
-        print(view.annotation?.title)
+        print(view.annotation?.title!!)
         
         // Получаем координаты метки
         let location:CLLocation = CLLocation(latitude: (view.annotation?.coordinate.latitude)!, longitude: (view.annotation?.coordinate.longitude)!)
