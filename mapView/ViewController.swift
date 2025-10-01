@@ -25,6 +25,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
     
     var followMe = false
     
+    
     @IBOutlet weak var distanceLabel: UILabel!
     
     override func viewDidLoad() {
@@ -205,6 +206,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UIGestureReco
             self.mapview.setRegion(MKCoordinateRegion(rect), animated: true)
         }
     }
+    
+    
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         // Настраиваем линию
